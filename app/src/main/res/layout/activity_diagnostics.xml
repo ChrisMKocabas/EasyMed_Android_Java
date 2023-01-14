@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diagnostics.DiagnosticsActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="414dp"
+        android:layout_height="370dp"
+        android:alpha="0.10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58000004"
+        app:srcCompat="@drawable/ic_launcher_icon"
+        android:clickable="false"/>
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        app:layout_constraintBottom_toTopOf="@+id/resultsTxtField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/expandBtn"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosticLabel" />
+
+    <TextView
+        android:id="@+id/diagnosticLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="106dp"
+        android:text="Symptoms Mentioned"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagnosticsActHeader"
+        app:layout_constraintBottom_toTopOf="@id/expandBtn"/>
+
+    <TextView
+        android:id="@+id/DiagnosticsActHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Diagnostic Result"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/diagnosticLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/expandBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expand"
+        app:layout_constraintEnd_toStartOf="@+id/editBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosticLabel"
+        app:layout_constraintBottom_toTopOf="@id/resultsTxtField"/>
+
+    <TextView
+        android:id="@+id/resultsTxtField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Possible results with correlation to symptoms:"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/showMedsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandBtn" />
+
+    <Button
+        android:id="@+id/showMedsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Show me OTC Medication"
+        app:layout_constraintBottom_toTopOf="@id/contactDoctorBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultsTxtField" />
+
+    <Button
+        android:id="@+id/contactDoctorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Contact a health Professional"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showMedsBtn" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
